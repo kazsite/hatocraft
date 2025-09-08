@@ -104,7 +104,7 @@ sudo apt update && sudo apt upgrade -y
 
 インスタンス内直下にマイクラサーバー入れるか、Docker上で運用するか検討（後者の方が良い）
 
-Dockerインストールは別途`ec2-ubuntu-setup.sh`実行
+Dockerインストールは別途[ec2-ubuntu-setup.sh](./ec2-ubuntu-setup.sh)実行
 
 `itzg/minecraft-server`Pullしてdocker-compose.yml作成
 
