@@ -98,3 +98,16 @@ ssh -i /path/to/minecraft-key.pem ubuntu@EC2PublicIP
 ```bash
 # パッケージ更新
 sudo apt update && sudo apt upgrade -y
+```
+
+↓ 以下書きかけ
+
+インスタンス内直下にマイクラサーバー入れるか、Docker上で運用するか検討（後者の方が良い）
+
+Dockerインストールは別途`ec2-ubuntu-setup.sh`実行
+
+`itzg/minecraft-server`Pullしてdocker-compose.yml作成
+
+マルチプレイログイン
+
+以上。
