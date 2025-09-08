@@ -108,6 +108,10 @@ Dockerインストールは別途`ec2-ubuntu-setup.sh`実行
 
 `itzg/minecraft-server`Pullしてdocker-compose.yml作成
 
+```bash
+docker compose up -d
+```
+
 マルチプレイログイン
 
 以上。
