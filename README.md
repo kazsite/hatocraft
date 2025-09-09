@@ -118,4 +118,4 @@ MODサーバーや、server.properties設定等詳しい方法は[Minecraft Serv
 
 ### 3.4 マルチプレイログイン
 1. Minecraft Java Edtion実行後、**マルチプレイ → サーバーを追加 → サーバーアドレス**にEC2パブリックIPを指定
-2. ログイン！
+2. <span style="color:pink; font-weight:bold;">ログイン !!!</span>
