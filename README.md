@@ -105,30 +105,17 @@ sudo apt update && sudo apt upgrade -y
 git clone https://github.com/kazsite/hatocraft.git
 chmod +x ./hatocraft/ec2-ubuntu-setup.sh
 sudo ./hatocraft/ec2-ubuntu-setup.sh
-source ~/.bashrc
 ```
 
 ### 3.3 Minecraft Server導入
-MODサーバーや、server.properties設定等詳しい方法は[Minecraft Server on Docker](https://docker-minecraft-server.readthedocs.io/en/latest/)参照
-
+SSH再ログイン後以下コマンド実行
 ```bash
 # docker-compose.yml実行
 cd hatocraft
 docker compose up -d
 ```
+MODサーバーや、server.properties設定等詳しい方法は[Minecraft Server on Docker](https://docker-minecraft-server.readthedocs.io/en/latest/)参照
 
-↓ 以下書きかけ
-
-インスタンス内直下にマイクラサーバー入れるか、Docker上で運用するか検討（後者の方が良い）
-
-Dockerインストールは別途[ec2-ubuntu-setup.sh](./ec2-ubuntu-setup.sh)実行
-
-`itzg/minecraft-server`Pullしてdocker-compose.yml作成
-
-```bash
-docker compose up -d
-```
-
-マルチプレイログイン
-
-以上。
+### 3.4 マルチプレイログイン
+1. Minecraft Java Edtion実行後、**マルチプレイ → サーバーを追加 → サーバーアドレス**にEC2パブリックIPを指定
+2. ログイン！
