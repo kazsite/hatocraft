@@ -89,15 +89,32 @@
    - KMS キー: (デフォルト)aws/ebs
    - スループット: 125
 
+---
+
 ## 3. 必要ソフトウェアのインストール
 ### 3.1 SSH接続
 ```bash
-ssh -i /path/to/minecraft-key.pem ubuntu@EC2PublicIP
+ssh -i /path/to/minecraft-key.pem ubuntu@ec2-xxx-xxx-xxx-xxx.ap-northeast-1.compute.amazonaws.com
 ```
 ### 3.2 Ubuntu初期設定
 ```bash
 # パッケージ更新
 sudo apt update && sudo apt upgrade -y
+
+# NTPクライント & Docker導入
+git clone https://github.com/kazsite/hatocraft.git
+chmod +x ./hatocraft/ec2-ubuntu-setup.sh
+sudo ./hatocraft/ec2-ubuntu-setup.sh
+source ~/.bashrc
+```
+
+### 3.3 Minecraft Server導入
+MODサーバーや、server.properties設定等詳しい方法は[Minecraft Server on Docker](https://docker-minecraft-server.readthedocs.io/en/latest/)参照
+
+```bash
+# docker-compose.yml実行
+cd hatocraft
+docker compose up -d
 ```
 
 ↓ 以下書きかけ
